@@ -7,48 +7,70 @@ body {
 
 header {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 1rem 0;
   text-align: center;
 }
 
-.container {
-  padding: 2rem;
+.search-options {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .search-options ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .search-options li {
-  display: inline;
-  margin-right: 1rem;
-  cursor: pointer;
-}
-
-button {
-  display: block;
-  margin: 1rem 0;
+  display: inline-block;
+  margin: 0 1rem;
   padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #555;
+.search-options li:hover {
+  background-color: #333;
+  color: white;
+}
+
+h2 {
+  text-align: center;
 }
 
 .offers {
-  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .offer {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  width: 32%;
+  border: 1px solid #ccc;
+  padding: 1%;
+  box-sizing: border-box;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#rome{
+  margin-top: 2.5%;
+}
+
+#tokyo{
+  margin-top: 6%;
+}
+
+.offer img {
+  max-width: 100%;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
