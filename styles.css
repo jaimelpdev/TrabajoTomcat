@@ -2,21 +2,34 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #242424;
+  color: white;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.7rem;
 }
 
 header {
-  background-color: #333;
+  background-color: #b62c2c;
   color: white;
   padding: 1rem 0;
   text-align: center;
 }
 
 .search-options {
-  background-color: #fff;
+  background-color: #242424;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
 }
 
@@ -29,7 +42,7 @@ header {
 
 .search-options li {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 0.2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -37,12 +50,13 @@ header {
 }
 
 .search-options li:hover {
-  background-color: #333;
-  color: white;
+  background-color: #e0e0e0;
+  color: rgb(0, 0, 0);
 }
 
 h2 {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .offers {
@@ -53,20 +67,21 @@ h2 {
 
 .offer {
   width: 32%;
-  border: 1px solid #ccc;
-  padding: 1%;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 0.5%;
   box-sizing: border-box;
   text-align: center;
   flex-direction: column;
   justify-content: center;
 }
 
-#rome{
-  margin-top: 2.5%;
+#rome {
+  margin-top: 3%;
 }
 
-#tokyo{
-  margin-top: 6%;
+#tokyo {
+  margin-top: 8%;
 }
 
 .offer img {
