@@ -54,6 +54,15 @@ header {
   color: rgb(0, 0, 0);
 }
 
+.search-options a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-options a:hover {
+  color: inherit;
+}
+
 h2 {
   text-align: center;
   margin: 2rem 0;
