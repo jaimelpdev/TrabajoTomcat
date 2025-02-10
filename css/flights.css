@@ -97,7 +97,7 @@ h2 {
 }
 
 .offer img,
-article img {
+thead img {
   max-width: 40%;
   border-radius: 5px;
   cursor: pointer;
@@ -116,45 +116,44 @@ section h2 {
   color: #f5f5f5;
 }
 
-article {
-  display: flex;
-  align-items: flex-start;
-  background-color: #2a2a2a;
-  padding: 1.5rem;
+section#available-flights {
+  padding: 2rem;
+  background-color: #1e1e1e;
   border-radius: 10px;
+  margin: 2rem 0;
+}
+
+section#available-flights h2 {
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #f5f5f5;
+  text-align: center;
 }
 
-article img {
-  max-width: 40%;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 1.5rem;
+section#available-flights table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
 }
 
-article div {
-  flex: 1;
-}
-
-article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-article h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #ffcc00;
-}
-
-article p {
-  margin-bottom: 1rem;
+section#available-flights th,
+section#available-flights td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #555;
   color: #dcdcdc;
 }
 
-article .book {
+section#available-flights th {
+  background-color: #2a2a2a;
+  color: #ffcc00;
+}
+
+section#available-flights tr:hover {
+  background-color: #333;
+}
+
+section#available-flights a {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #ffcc00;
@@ -163,9 +162,10 @@ article .book {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
-article .book:hover {
+section#available-flights a:hover {
   background-color: #e6b800;
   color: #000;
 }

@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const address = document.getElementById("address").value;
-    alert(`Name: ${name}\nEmail: ${email}\nAddress: ${address}`);
+    alert(`Checkout successfully to:\n---------------------------\nName: ${name}\nEmail: ${email}\nAddress: ${address}`);
     checkoutForm.style.display = "none";
   });
 });
