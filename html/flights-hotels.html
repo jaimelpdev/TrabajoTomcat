@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/flights-hotels.css" />
     <title>Flights and Hotels</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Book Your Flights and Hotels</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+      <h1>Book Your Flights and Hotels</h1>
+      <div class="search-options">
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="hotels.html">Hotels</a></li>
           <li><a href="flights.html">Flights</a></li>
           <li><a href="flights-hotels.html">Flights + Hotels</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Search for Flights and Hotels</h2>
-            <form id="searchForm">
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" name="destination" required>
-                
-                <label for="checkIn">Check-in Date:</label>
-                <input type="date" id="checkIn" name="checkIn" required>
-                
-                <label for="checkOut">Check-out Date:</label>
-                <input type="date" id="checkOut" name="checkOut" required>
-                
-                <label for="guests">Number of Guests:</label>
-                <input type="number" id="guests" name="guests" min="1" required>
-                
-                <button type="submit">Search</button>
+        </ul>
+      </div>
+      <section>
+        <h2>Search for Flights and Hotels</h2>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Checkout</button>
+          </section>
+    
+          <section id="checkout-form" style="display: none">
+            <h2>Checkout Form</h2>
+            <form id="form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required /><br />
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required /><br />
+              <button type="submit">Submit</button>
             </form>
-        </section>
-        <section>
-            <h2>Featured Flights</h2>
-            <p>Check out our best flight deals!</p>
-            <!-- Flight listings will go here -->
-        </section>
-        <section>
-            <h2>Featured Hotels</h2>
-            <p>Explore our top hotel options!</p>
-            <!-- Hotel listings will go here -->
-        </section>
+          </section>
+        </form>
+      </section>
+      </header>
+      <section id="travel-packs">
+        <h2>Travel Packs</h2>
+        <article class="pack">
+          <h3>Family Pack to Mallorca</h3>
+          <p>Enjoy a family vacation in Mallorca with flights and hotel included.</p>
+          <p><strong>Flight:</strong> Flight to Mallorca</p>
+          <img src="../imgs/flights-hotels/hotel-mallorca-jutlandia.webp" alt="Image of Hotel Mallorca Jutlandia">
+          <p><strong>Hotel:</strong> Hotel Mallorca Jutlandia</p>
+          <button class="book">Book Now</button>
+        </article>
+        <article class="pack">
+          <h3>Business Pack to Dubai</h3>
+          <p>Travel to Dubai for business with premium flights and hotel stay.</p>
+          <p><strong>Flight:</strong> Business Class Flight to Dubai</p>
+          <img src="../imgs/flights-hotels/jw-marriott-marquis.webp" alt="Image of JW Marriott Marquis">
+          <p><strong>Hotel:</strong> JW Marriott Marquis</p>
+          <button class="book">Book Now</button>
+        </article>
+        <article class="pack">
+          <h3>Honeymoon Pack to Bora Bora</h3>
+          <p>Experience a romantic honeymoon in Bora Bora with luxury flights and hotel.</p>
+          <p><strong>Flight:</strong> Luxury Flight to Bora Bora</p>
+          <img src="../imgs/flights-hotels/bora-bora-honeymoon-resort.webp" alt="Bora Bora Honeymoon Resort">
+          <p><strong>Hotel:</strong> Bora Bora Honeymoon Resort</p>
+          <button class="book">Book Now</button>
+        </article>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2025 Travel Website. All rights reserved.</p>
+      <p>&copy; 2025 Travel Website. All rights reserved.</p>
     </footer>
-    <script src="../scripts/main.js"></script>
-</body>
+    <script src="../scripts/flights-hotels.js"></script>
+  </body>
 </html>

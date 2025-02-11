@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  color: white;
+}
+
+p,
+li,
+h3 {
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #b62c2c;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.search-options {
+  background-color: #242424;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.search-options ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-options li {
+  display: inline-block;
+  margin: 0 0.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.search-options li:hover {
+  background-color: #e0e0e0;
+  color: rgb(0, 0, 0);
+}
+
+.search-options a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#cart {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+
+#cart h2,
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #555;
+}
+
+#cart-items .increase,
+#cart-items .decrease,
+#checkout {
+  background-color: #b62c2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+#cart-items .increase:hover,
+#cart-items .decrease:hover,
+#checkout:hover {
+  background-color: #a02424;
+}
+
+.offer img,
+article img {
+  max-width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+}
+
+article {
+  display: flex;
+  align-items: flex-start;
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article img {
+  max-width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+article div {
+  flex: 1;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+article h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+}
+
+article p {
+  margin-bottom: 1rem;
+  color: #dcdcdc;
+}
+
+article .book {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffcc00;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+article .book:hover {
+  background-color: #e6b800;
+  color: #000;
+}
+
+#travel-packs {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+#travel-packs h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.pack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pack h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+}
+
+.pack p {
+  margin-bottom: 1rem;
+  color: #dcdcdc;
+  text-align: center;
+}
+
+.pack .book {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffcc00;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pack .book:hover {
+  background-color: #e6b800;
+  color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-top: 1px solid #333;
+}
+
+#checkout {
+  background-color: #b62c2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#checkout:hover {
+  background-color: #a02424;
+}

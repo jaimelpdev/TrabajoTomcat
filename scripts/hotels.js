@@ -60,6 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Function to empty the cart
+  function emptyCart() {
+    // Assuming the cart is stored in localStorage
+    localStorage.removeItem("cart");
+    // Remove all items from the cart in the DOM
+    while (cartItems.firstChild) {
+      cartItems.removeChild(cartItems.firstChild);
+    }
+  }
+
   checkoutButton.addEventListener("click", function () {
     checkoutForm.style.display = "block";
   });
@@ -69,7 +79,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const address = document.getElementById("address").value;
-    alert(`Checkout successfully to:\n---------------------------\nName: ${name}\nEmail: ${email}\nAddress: ${address}`);
+    alert(
+      `Checkout successfully to:\n---------------------------\nName: ${name}\nEmail: ${email}\nAddress: ${address}`
+    );
     checkoutForm.style.display = "none";
+    // Empty the cart after submitting the checkout
+    emptyCart();
   });
+
+  // Add event listener to the checkout button
+  document
+    .getElementById("checkoutButton")
+    .addEventListener("click", function () {
+      handleCheckout();
+    });
 });

@@ -13,21 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  bookButtons.forEach((button) => {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-      const parentElement = this.closest("article, tr");
-      const itemName = parentElement.querySelector(
-        ".offer, td:nth-of-type(3)"
-      ).textContent;
-      const itemPrice = parentElement.querySelector(
-        "p:nth-of-type(2), td:nth-of-type(4)"
-      ).textContent;
-      addToCart(itemName, itemPrice);
+  const packButtons = document.querySelectorAll(".pack .book");
+
+  packButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const packName = this.closest(".pack").querySelector("h3").textContent;
+      const packDescription =
+        this.closest(".pack").querySelector("p").textContent;
+      addToCart(packName, packDescription);
     });
   });
 
-  function addToCart(itemName, itemPrice) {
+  function addToCart(itemName, itemDescription) {
     let cartItem = document.querySelector(`li[data-item="${itemName}"]`);
     if (cartItem) {
       const quantityElement = cartItem.querySelector(".quantity");
@@ -36,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItem = document.createElement("li");
       cartItem.setAttribute("data-item", itemName);
       cartItem.innerHTML = `
-        ${itemName} - ${itemPrice} 
+        ${itemName} - ${itemDescription} 
         <button class="decrease">-</button>
         <span class="quantity">1</span>
         <button class="increase">+</button>
@@ -69,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function emptyCart() {
     // Assuming the cart is stored in localStorage
     localStorage.removeItem("cart");
+    console.log("The cart has been emptied.");
     // Remove all items from the cart in the DOM
     while (cartItems.firstChild) {
       cartItems.removeChild(cartItems.firstChild);
